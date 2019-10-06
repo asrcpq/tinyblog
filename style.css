@@ -1,0 +1,48 @@
+#left {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 30%;
+	height: 100%;
+	/*border-right: 2px solid #fff;*/
+}
+#right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 70%;
+	height: 100%;
+	/*border-left: 0px solid #fff;*/
+}
+#navibody {
+	background: #eee;
+	overflow: hidden;
+	margin: 0px;
+}
+#navidiv {
+	font-family: "Arial", "Serif";
+	font-size: 14px;
+	white-space: nowrap;
+	background: #eee;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-left: 2%;
+	height: 100%;
+	padding: 2px;
+	border: none;
+	line-height: 20px;
+}
+iframe {
+	border: none;
+	height: 100%;
+	width: 100%;
+}
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+	display: flex;
+}
