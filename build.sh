@@ -6,6 +6,7 @@ rm -rf "$flattendir"
 mkdir "$flattendir"
 cd "$flattendir"
 find ../src/ -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | xargs -i ln -s {} ./
+cd ..
 
 filelist="$(ls -r "$flattendir" | egrep '^[0-9]{6}')"
 ls output | egrep '^[0-9]{6}' | xargs -i rm output/{}
