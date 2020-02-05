@@ -2,7 +2,7 @@
 set -e
 scriptdir="$(dirname $0)"
 cd $scriptdir
-filelist=$(find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md')
+filelist="$(find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | sed -E 's/(.*\/)([0-9]{6})(.*)/\2 \1\2\3/g' | sort -r | cut -d' ' -f2)"
 if [ ! -d output ]; then
 	mkdir output
 fi
