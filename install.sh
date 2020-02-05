@@ -4,4 +4,4 @@ cd "$parent_path"
 cp index.html $current_path
 cp pandoc.css $current_path
 cp style.css $current_path
-cp generators.sh $current_path
+cp build.sh $current_path
