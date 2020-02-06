@@ -29,7 +29,7 @@ cat ./filelist | while read -r each_fullname; do
 			pandoc "$each_fullname" \
 				-s \
 				--metadata pagetitle="$filehead" \
-				--css pandoc.css \
+				--css "../pandoc.css" \
 				-o output/"$filehead".html
 		else
 			echo -n "."
@@ -38,8 +38,13 @@ cat ./filelist | while read -r each_fullname; do
 			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 	elif [ "$suffix" = "mdproj" ]; then
 		echo -n 'x'
+		# in makefile use --css ../../pandoc.css
 		make -C "$each_fullname" -j -s
-		echo "<a draggable="false" href=\"../$each_fullname/output.html\"" \
+		rm -rf output/"$filename"
+		mkdir output/"$filename"
+		ln -s "$each_fullname"/output.html output/"$filename"/output.html
+		ln -s "$each_fullname"/resource output/"$filename"/resource
+		echo "<a draggable="false" href=\"output/$filename/output.html\"" \
 			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 	fi
 done
