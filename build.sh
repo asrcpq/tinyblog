@@ -26,7 +26,6 @@ cat ./filelist | while read -r each_fullname; do
 		# this works with nonexistent output file
 		if [ ! "$each_fullname" -ot "./output/$filehead.html" ]; then
 			echo -n "+"
-			exit 1
 			pandoc "$each_fullname" \
 				-s \
 				--metadata pagetitle="$filehead" \
@@ -38,8 +37,8 @@ cat ./filelist | while read -r each_fullname; do
 		echo "<a draggable="false" href=\"$filehead.html\"" \
 			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 	elif [ "$suffix" = "mdproj" ]; then
-		make -C "$each_fullname" -j
-		ln -s "$each_fullname"
+		echo -n 'x'
+		make -C "$each_fullname" -j -s
 		echo "<a draggable="false" href=\"$each_fullname/output.html\"" \
 			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 	fi
