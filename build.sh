@@ -39,7 +39,7 @@ cat ./filelist | while read -r each_fullname; do
 	elif [ "$suffix" = "mdproj" ]; then
 		echo -n 'x'
 		make -C "$each_fullname" -j -s
-		echo "<a draggable="false" href=\"$each_fullname/output.html\"" \
+		echo "<a draggable="false" href=\"../$each_fullname/output.html\"" \
 			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 	fi
 done
