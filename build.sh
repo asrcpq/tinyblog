@@ -12,7 +12,7 @@ echo '<html><head>
 </head><body id="navibody"><div id="navidiv">' > output/navi.html
 
 lastmonth="0000"
-cat ./filelist | while read -r each_fullname; do
+find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | sed -E 's/(.*\/)([0-9]{6})(.*)/\2 \1\2\3/g' | sort -r | cut -d' ' -f | while read -r each_fullname; do
 	filename="$(echo "$each_fullname" | sed -E 's/.*\/()/\1/g')"
 	filehead="$(echo "$filename" | grep -o '^[^.]*')"
 	suffix="$(echo "$filename" | grep -o '[^.]*$')"
