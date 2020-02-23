@@ -15,9 +15,10 @@ color: #444;
 	font-size: 14px;
 	line-height: 1.2;
 	padding: 2em;
-	/*margin: auto; */
-	/*max-width: 42em; */
+	margin: auto;
+	max-width: 42em;
 	background: #ffffff;
+	box-shadow:0 0 0 1000px #002f2f
 }
 
 a {
