@@ -22,7 +22,6 @@
 	margin-left: 2%;
 	height: 100%;
 	padding: 2px;
-	border: none;
 	line-height: 20px;
 }
 iframe {
@@ -41,8 +40,7 @@ a:visited {
 	display: flex;
 }
 :root {
-	scrollbar-color: #ffaf00 #000;
-	scrollbar-width: 10px;
+	scrollbar-color: #ffaf00 #222;
 }
 
 #btn {
@@ -51,7 +49,7 @@ a:visited {
 	left: 100%;
 	height: 60px;
 	line-height: 60px;
-	width: 15px;
+	width: 12px;
 	padding: 0px;
 	background: #fa0;
 	cursor: pointer;
@@ -63,7 +61,7 @@ aside {
 	left: 0;
 	top: 0px;
 	bottom: 0;
-	transition: right 2s ease;
+	transition: left 1s ease;
 }
 .open {
 	left: 0px;

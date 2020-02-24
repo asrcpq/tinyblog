@@ -21,8 +21,7 @@ body {
 }
 
 :root {
-	scrollbar-color: #ffaf00 #000;
-	scrollbar-width: 10px;
+	scrollbar-color: #ffaf00 #222;
 }
 
 a {
