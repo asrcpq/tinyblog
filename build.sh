@@ -7,7 +7,7 @@ if [ ! -d output ]; then
 fi
 
 echo '<html><head>
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="../style.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
 </head><body id="navibody"><div id="navidiv">' > output/navi.html
 
