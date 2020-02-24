@@ -10,7 +10,6 @@ html {
 }
 
 body {
-color: #444;
 	font-family: "Arial", "Serif";
 	font-size: 14px;
 	line-height: 1.2;
@@ -19,6 +18,11 @@ color: #444;
 	max-width: 42em;
 	background: #ffffff;
 	box-shadow:0 0 0 1000px #000
+}
+
+:root {
+	scrollbar-color: #ffaf00 #000;
+	scrollbar-width: 10px;
 }
 
 a {

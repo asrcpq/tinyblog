@@ -40,6 +40,10 @@ a:visited {
 	text-decoration: none;
 	display: flex;
 }
+:root {
+	scrollbar-color: #ffaf00 #000;
+	scrollbar-width: 10px;
+}
 
 #btn {
 	position: absolute;
