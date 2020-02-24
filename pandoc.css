@@ -18,11 +18,11 @@ color: #444;
 	margin: auto;
 	max-width: 42em;
 	background: #ffffff;
-	box-shadow:0 0 0 1000px #2f2f2f
+	box-shadow:0 0 0 1000px #000
 }
 
 a {
-color: #0645ad;
+	color: #0645ad;
 	text-decoration: none;
 }
 
@@ -43,22 +43,22 @@ a:focus {
 }
 
 *::-moz-selection {
-	background: rgba(255, 255, 0, 0.3);
+	background: #0ff;
 	color: #000;
 }
 
 *::selection {
-	background: rgba(255, 255, 0, 0.3);
+	background: #0ff;
 	color: #000;
 }
 
 a::-moz-selection {
-	background: rgba(255, 255, 0, 0.3);
+	background: #0ff;
 	color: #0645ad;
 }
 
 a::selection {
-	background: rgba(255, 255, 0, 0.3);
+	background: #0ff;
 	color: #0645ad;
 }
 

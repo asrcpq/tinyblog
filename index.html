@@ -3,7 +3,7 @@
 		<script type="text/javascript">
 			function toggle() {
 				var aside = document.getElementById("navi")
-				if (aside.offsetLeft == 0) {
+				if (aside.offsetLeft >= 0) {
 					aside.setAttribute("class", "close")
 				} else {
 					aside.setAttribute("class", "open")
@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<aside class="box" id="navi">
-			<button onclick="toggle()">三</button>
+			<span id="btn" draggable="true" onclick="toggle()"></span>
 			<iframe name="navinfo" src="output/navi.html" ></iframe>
 		</aside>
 		<div id="right">
