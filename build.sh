@@ -48,4 +48,5 @@ find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | sed -E 's/(.*\/
 			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 	fi
 done
+echo "</div></body></html>" >> output/navi.html
 echo
