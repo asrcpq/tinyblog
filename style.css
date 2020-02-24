@@ -1,14 +1,4 @@
-#left {
-	position: absolute;
-	top: 0;
-	left: 0px;
-	width: 25%;
-	height: 100%;
-	opacity: 0.8;
-	z-index: 100;
-	/*border-right: 2px solid #fff;*/
-}
-#right {
+#pandoc {
 	position: absolute;
 	top: 0;
 	right: 0;
