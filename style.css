@@ -56,15 +56,16 @@ a:visited {
 }
 aside {
 	z-index: 100;
-	width: 20%;
-	min-width: 300px;
+	width: 300px;
+	left: 0px;
 	position: fixed;
 	top: 0px;
 	bottom: 0;
+	transition: left 0.7s ease;
 }
 .open {
 	left: 0px;
 }
 .close {
-	right: 100%;
+	left: -300px;
 }
