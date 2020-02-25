@@ -29,6 +29,7 @@ find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | sed -E 's/(.*\/
 			pandoc "$each_fullname" \
 				-s \
 				--metadata pagetitle="$filehead" \
+				--highlight-style=breezedark \
 				--css "../pandoc.css" \
 				-o output/"$filehead".html
 		else

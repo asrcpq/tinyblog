@@ -31,24 +31,8 @@ body {
 }
 
 a {
-	color: #0645ad;
+	color: #f00;
 	text-decoration: none;
-}
-
-a:visited {
-	color: #0b0080;
-}
-
-a:hover {
-	color: #06e;
-}
-
-a:active {
-	color: #faa700;
-}
-
-a:focus {
-	outline: thin dotted;
 }
 
 *::-moz-selection {
@@ -127,13 +111,12 @@ hr {
 	height: 2px;
 	border: 0;
 	border-top: 1px solid #aaa;
-	border-bottom: 1px solid #eee;
 	margin: 1em 0;
 	padding: 0;
 }
 
 pre, code, kbd, samp {
-color: #000;
+	color: #ccc;
 	font-family: monospace, monospace;
 	font-size: 0.98em;
 }
@@ -178,6 +161,10 @@ sup {
 
 sub {
 	bottom: -0.25em;
+}
+
+ul {
+	list-style-type: square;
 }
 
 ul, ol {
