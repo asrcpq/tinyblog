@@ -9,7 +9,7 @@
 }
 #navibody {
 	overflow: hidden;
-	background: rgba(255, 255, 255, 0.0);
+	background: rgba(0, 0, 0, 0.7);
 	margin: 0px;
 }
 #navidiv {
@@ -57,15 +57,14 @@ a:visited {
 aside {
 	z-index: 100;
 	width: 20%;
+	min-width: 300px;
 	position: fixed;
-	left: 0;
 	top: 0px;
 	bottom: 0;
-	transition: left 1s ease;
 }
 .open {
 	left: 0px;
 }
 .close {
-	left: -20%;
+	right: 100%;
 }
