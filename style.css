@@ -19,7 +19,8 @@
 	white-space: nowrap;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	margin-left: 2%;
+	margin-left: 5px;
+	margin-bottom: 10px;
 	height: 100%;
 	padding: 2px;
 	line-height: 20px;
