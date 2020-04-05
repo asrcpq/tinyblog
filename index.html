@@ -1,25 +1,27 @@
 <html>
-	<head>
-		<script type="text/javascript">
-			function toggle() {
-				var aside = document.getElementById("navi")
-				if (aside.offsetLeft >= 0) {
-					aside.setAttribute("class", "close")
-				} else {
-					aside.setAttribute("class", "open")
-				}
-			}
-		</script>
-		<link href="style.css" rel="stylesheet" type="text/css" />
-		<meta http-equiv="content-type" content="text/html;charset=utf-8">
-	</head>
-	<body>
-		<aside class="box" id="navi">
-			<span id="btn" onclick="toggle()">|</span>
-			<iframe name="navinfo" src="output/navi.html" ></iframe>
-		</aside>
-		<div id="pandoc">
-			<iframe name="bodyinfo" src="output/190802-test.html"></iframe>
-		</div>
-	</body>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+
+<body onKeyDown="doKey(event)">
+<aside class="box" id="navi">
+<span id="btn" onclick="toggle()">|</span>
+<iframe name="navinfo" src="output/navi.html" ></iframe>
+</aside>
+<div id="pandoc">
+<iframe name="bodyinfo" src="output/190802-test.html"></iframe>
+</div>
+</body>
+
+<script type="text/javascript">
+function toggle() {
+	var aside = document.getElementById("navi");
+	if (aside.offsetLeft >= 0) {
+		aside.setAttribute("class", "close");
+	} else {
+		aside.setAttribute("class", "open");
+	}
+}
+</script>
 </html>
