@@ -37,16 +37,6 @@ find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | sed -E 's/(.*\/
 		fi
 		echo "<a draggable="false" href=\"$filehead.html\"" \
 			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
-	elif [ "$suffix" = "mdproj" ]; then
-		echo -n 'x'
-		# in makefile use --css ../../pandoc.css
-		make -C "$each_fullname" -j -s
-		rm -rf output/"$filename"
-		mkdir output/"$filename"
-		ln -s "$each_fullname"/output.html output/"$filename"/output.html
-		ln -s "$each_fullname"/resource output/"$filename"/resource
-		echo "<a draggable="false" href=\"output/$filename/output.html\"" \
-			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 	fi
 done
 echo '<hr>' >> output/navi.html
