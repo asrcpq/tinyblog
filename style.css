@@ -40,9 +40,21 @@ a:visited {
 	text-decoration: none;
 	display: flex;
 }
+
 :root {
 	scrollbar-color: #ffaf00 #222;
 }
+::-webkit-scrollbar-track {
+	background-color: #222;
+}
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #222;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #ffaf00;
+}
+
 
 #btn {
 	position: absolute;
