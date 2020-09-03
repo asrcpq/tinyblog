@@ -41,7 +41,7 @@ body {
 }
 
 a {
-	color: #f00;
+	color: #0f8;
 	text-decoration: none;
 }
 
@@ -109,11 +109,11 @@ h6 {
 }
 
 blockquote {
-	color: #f0a;
+	color: #58a;
 	background: #000;
 	margin: 0;
 	padding-left: 3em;
-	border-left: 0.5em #EEE solid;
+	border-left: 0.2em #447 solid;
 }
 
 hr {
@@ -140,6 +140,11 @@ pre {
 b, strong {
 	color: #ff5f00;
 	font-weight: bold;
+}
+
+i, em {
+	color: #ed7;
+	font-weight: italic;
 }
 
 dfn {
