@@ -1,0 +1,6 @@
+#!/bin/zsh
+if [ "$1" = "install" ]; then
+	"${0:A:h}/../install.sh" "$2"
+elif [ "$1" = "build" ]; then
+	"${0:A:h}/../build.sh" "$2"
+fi

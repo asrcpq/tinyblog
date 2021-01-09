@@ -1,7 +1,11 @@
 #!/bin/bash
 set -e
-scriptdir="$(dirname $0)"
-cd $scriptdir
+if [ -n "$1" ]; then
+	cd "$1"
+else
+	scriptdir="$(dirname $0)"
+	cd $scriptdir
+fi
 if [ ! -d output ]; then
 	mkdir output
 fi
