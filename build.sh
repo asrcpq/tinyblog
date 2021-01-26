@@ -24,32 +24,33 @@ echo '<html><head>
 </head><body id="navibody"><div id="navidiv">' > output/navi.html
 
 lastmonth="0000"
-find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | sed -E 's/(.*\/)([0-9]{6})(.*)/\2 \1\2\3/g' | sort -r | cut -d' ' -f2 | while read -r each_fullname; do
+find ./src -type f -regextype sed -regex '.*/[0-9]\{6\}[^/]*\.md' |\
+	sed -E 's/(.*\/)([0-9]{6})(.*)/\2 \1\2\3/g' |\
+	sort -r |\
+	cut -d' ' -f2 |\
+	while read -r each_fullname; do
 	filename="${each_fullname##*/}"
 	filehead="${filename%.*}"
-	suffix="${filename##*.}"
 	month=${filename:0:4}
 	if [ "$month" != "$lastmonth" ]; then
 		echo '<hr>' >> output/navi.html
 		echo "<h3>$month</h3>" >> output/navi.html
 	fi
 	lastmonth=$month
-	if [ "$suffix" = 'md' ]; then
-		# this works with nonexistent output file
-		if [ ! "$each_fullname" -ot "./output/$filehead.html" ]; then
-			echo -n "+"
-			pandoc "$each_fullname" \
-				-s \
-				--metadata pagetitle="$filehead" \
-				--highlight-style=breezedark \
-				--css "../pandoc.css" \
-				-o output/"$filehead".html
-		else
-			echo -n "."
-		fi
-		echo "<a draggable="false" href=\"$filehead.html\"" \
-			"target=bodyinfo>$filehead<br></a>" >> output/navi.html
+	# this works with nonexistent output file
+	if [ ! "$each_fullname" -ot "./output/$filehead.html" ]; then
+		echo -n "+"
+		pandoc "$each_fullname" \
+			-s \
+			--metadata pagetitle="$filehead" \
+			--highlight-style=breezedark \
+			--css "../pandoc.css" \
+			-o output/"$filehead".html
+	else
+		echo -n "."
 	fi
+	echo "<a draggable="false" href=\"$filehead.html\"" \
+		"target=bodyinfo>$filehead<br></a>" >> output/navi.html
 done
 echo '<hr>' >> output/navi.html
 echo "</div></body></html>" >> output/navi.html
