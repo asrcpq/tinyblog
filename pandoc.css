@@ -260,7 +260,14 @@ table td {
 
 .author {
 	font-size: 1.2em;
-	text-align: left;
+	text-align: right;
+	margin: 0 1em;
+}
+
+.date {
+	font-size: 1em;
+	text-align: right;
+	margin: 0 1em;
 }
 
 @media only screen and (min-width: 480px) {
