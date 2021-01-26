@@ -1,12 +1,21 @@
 #!/bin/bash
 set -e
-if [ -n "$1" ]; then
-	cd "$1"
-else
-	scriptdir="$(dirname $0)"
-	cd $scriptdir
+
+TB_ROOT="$XDG_DATA_HOME/tinyblog"
+
+if [ -z "$1" ]; then
+	exit 1
 fi
-if [ ! -d output ]; then
+
+current_path="$(readlink -f $1)"
+cd "$TB_ROOT"
+cp index.html $current_path
+cp pandoc.css $current_path
+cp style.css $current_path
+cp build.sh $current_path
+
+cd "$1"
+if ! [ -d output ]; then
 	mkdir output
 fi
 

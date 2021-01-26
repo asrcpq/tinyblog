@@ -1,7 +1,3 @@
-/*
- * I add this to html files generated with pandoc.
- */
-
 html {
 	font-size: 100%;
 	overflow-y: scroll;
@@ -186,6 +182,10 @@ ul {
 ul, ol {
 	margin: 0em 0;
 	padding: 0 0 0 2em;
+}
+
+::marker {
+	color: #ff0;
 }
 
 li p:last-child {
