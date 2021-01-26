@@ -12,7 +12,6 @@ cd "$TB_ROOT"
 cp index.html $current_path
 cp pandoc.css $current_path
 cp style.css $current_path
-cp build.sh $current_path
 
 cd "$1"
 if ! [ -d output ]; then
@@ -26,10 +25,10 @@ echo '<html><head>
 
 lastmonth="0000"
 find ./src -type f -name "*.md" | egrep '.*/[0-9]{6}[^/]*\.md' | sed -E 's/(.*\/)([0-9]{6})(.*)/\2 \1\2\3/g' | sort -r | cut -d' ' -f2 | while read -r each_fullname; do
-	filename="$(echo "$each_fullname" | sed -E 's/.*\/()/\1/g')"
-	filehead="$(echo "$filename" | grep -o '^[^.]*')"
-	suffix="$(echo "$filename" | grep -o '[^.]*$')"
-	month=$(echo $filename | grep -o '^....') 
+	filename="${each_fullname##*/}"
+	filehead="${filename%.*}"
+	suffix="${filename##*.}"
+	month=${filename:0:4}
 	if [ "$month" != "$lastmonth" ]; then
 		echo '<hr>' >> output/navi.html
 		echo "<h3>$month</h3>" >> output/navi.html
