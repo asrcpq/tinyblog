@@ -31,7 +31,7 @@ iframe {
 	width: 100%;
 }
 a {
-	color: #ffaf00;
+	color: #088;
 }
 a:link {
 	text-decoration: none;
@@ -42,7 +42,7 @@ a:visited {
 }
 
 :root {
-	scrollbar-color: #ffaf00 #222;
+	scrollbar-color: #066 #222;
 }
 ::-webkit-scrollbar-track {
 	background-color: #222;
@@ -52,7 +52,7 @@ a:visited {
 	background-color: #222;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: #ffaf00;
+	background-color: #066;
 }
 
 
@@ -64,7 +64,7 @@ a:visited {
 	line-height: 60px;
 	width: 12px;
 	padding: 0px;
-	background: #fa0;
+	background: #066;
 	cursor: pointer;
 }
 aside {

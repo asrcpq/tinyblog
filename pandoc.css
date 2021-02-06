@@ -8,7 +8,7 @@ html {
 body {
 	font-family: "Arial", "Serif";
 	font-size: 14px;
-	color: #ffaf00;
+	color: #fff;
 	line-height: 1.2;
 	padding: 2em;
 	margin: auto;
@@ -16,14 +16,14 @@ body {
 	margin-bottom: 20px;
 	border-style: solid;
 	border-width: 1px;
-	border-color: #ffaf00;
+	border-color: #499;
 	max-width: 42em;
 	background: #000000;
 	box-shadow:0 0 0 1000px #000
 }
 
 :root {
-	scrollbar-color: #ffaf00 #222;
+	scrollbar-color: #066 #222;
 }
 ::-webkit-scrollbar-track {
 	background-color: #222;
@@ -33,7 +33,7 @@ body {
 	background-color: #222;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: #ffaf00;
+	background-color: #066;
 }
 
 a {
@@ -116,7 +116,7 @@ hr {
 	display: block;
 	height: 2px;
 	border: 0;
-	border-top: 1px solid #aaa;
+	border-top: 1px solid #066;
 	margin: 1em 0;
 	padding: 0;
 }
@@ -130,6 +130,8 @@ pre, code, kbd, samp {
 pre {
 	white-space: pre;
 	white-space: pre-wrap;
+	background: #111;
+	border: 1px solid #555;
 	word-wrap: break-word;
 }
 
