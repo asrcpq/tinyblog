@@ -136,13 +136,27 @@ pre {
 }
 
 b, strong {
-	color: #ff5f00;
+	color: #f60;
 	font-weight: bold;
 }
 
 i, em {
 	color: #ed7;
 	font-weight: italic;
+}
+
+mark {
+	color: #000;
+}
+
+mark em, mark i {
+	color: #333;
+	font-style: italic;
+}
+
+mark b, mark strong {
+	color: #f60;
+	font-weight: bold;
 }
 
 dfn {
@@ -153,13 +167,6 @@ ins {
 	background: #ff9;
 	color: #000;
 	text-decoration: none;
-}
-
-mark {
-	background: #ff0;
-	color: #000;
-	font-style: italic;
-	font-weight: bold;
 }
 
 sub, sup {
