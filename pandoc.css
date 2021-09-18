@@ -16,7 +16,7 @@ body {
 	margin-bottom: 20px;
 	border-style: solid;
 	border-width: 1px;
-	border-color: #499;
+	border-color: #557;
 	max-width: 42em;
 	background: #000000;
 	box-shadow:0 0 0 1000px #000
@@ -116,7 +116,7 @@ hr {
 	display: block;
 	height: 2px;
 	border: 0;
-	border-top: 1px solid #066;
+	border-top: 1px solid #777;
 	margin: 1em 0;
 	padding: 0;
 }
